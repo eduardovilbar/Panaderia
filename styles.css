@@ -351,4 +351,27 @@ footer {
     width: 100%; /* La foto ahora ocupa todo el ancho disponible */
     justify-content: center;
   }
+  /* --- 3. Arreglando Productos (De 3 columnas a 1 sola) --- */
+  .grid-productos {
+    grid-template-columns: 1fr; /* En celular, obligamos a que solo haya 1 columna que ocupe todo el ancho */
+  }
+
+  /* --- 4. Arreglando Nosotros y Contacto (Apilar cajas) --- */
+  .nosotros-contenido,
+  .contacto-contenedor {
+    flex-direction: column; /* Apilamos la foto arriba y el texto abajo (o viceversa) */
+    text-align: center;
+  }
+
+  .nosotros-imagen,
+  .nosotros-texto,
+  .info-contacto,
+  .mapa-placeholder {
+    width: 100%; /* Hacemos que cada caja use el 100% de la pantalla del celular */
+    margin-bottom: 30px; /* Les damos espacio para que no se peguen */
+  }
+
+  .info-contacto {
+    text-align: center; /* Centramos los horarios para que se vean mejor en móvil */
+  }
 }
