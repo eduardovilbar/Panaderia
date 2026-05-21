@@ -1,0 +1,224 @@
+body {
+background-color: #F9F4EC; /* El color cremita de fondo */
+  color: #4A3018; /* El color café tostado para las letras */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly; /* Reparte el espacio por igual entre el menú izquierdo, el logo y el menú derecho */
+  align-items: center; /* ¡MAGIA! Esto centra todos los elementos verticalmente para que ninguno quede chueco */
+  padding: 15px 50px; /* Redujimos el 50px de arriba/abajo a 15px para que la barra no quite tanta pantalla */
+  position: fixed; 
+  top: 0;          
+  left: 0;         
+  width: 100%;     
+  z-index: 1000;   
+  box-sizing: border-box; /* Evita que el padding haga que la barra se salga de la pantalla */
+}
+
+/* Estilos para los enlaces del menú */
+.navbar a {
+  text-decoration: none; /* Magia: esto quita el feo subrayado azul */
+  color: #442818; /* Usamos el café oscuro de tu logo */
+  font-family: Arial, sans-serif; /* Cambiamos a un tipo de letra más limpio y moderno */
+  font-weight: bold; /* Hacemos la letra un poco más gordita */
+  text-transform: uppercase; /* Pasa todo a MAYÚSCULAS automáticamente */
+  margin: 0 15px; /* Le da 15 pixeles de espacio a la izquierda y derecha a cada palabra */
+  letter-spacing: 1px; /* Separa un poquito cada letra para que se vea más elegante */
+  font-size: 25px;
+}
+
+/* Efecto al pasar el mouse por encima (Hover) */
+.navbar a:hover {
+  color: #D97941; /* Cambia al color "dorado horneado" cuando el cliente pasa el cursor */
+}
+
+/* Estilos para el logo de la panadería */
+.navbar .logo {
+  width: 250px; /* Un tamaño mucho más elegante y proporcionado */
+  border-radius: 50%; /* Como tu imagen es cuadrada con fondo crema, esto hace que se recorte en un círculo perfecto */
+}
+/* --- SECCIÓN HERO --- */
+.hero {
+  display: flex; /* Nos permite poner elementos lado a lado */
+  justify-content: space-between; /* Separa el texto de la imagen */
+  align-items: center; /* Centra verticalmente */
+  padding: 180px 10% 50px 10%; /* IMPORTANTE: 180px de espacio arriba para que tu menú fijo no tape el texto */
+  max-width: 1200px;
+  margin: 0 auto; /* Centra toda la sección en la pantalla */
+}
+
+/* Estilos para la caja del texto (mitad izquierda) */
+.hero-texto {
+  width: 45%; 
+}
+
+/* El título grande */
+.hero-texto h1 {
+  font-size: 65px;
+  color: #442818;
+  font-family: "Times New Roman", Times, serif; /* Una letra elegante clásica */
+  font-weight: normal;
+  margin-bottom: 20px;
+  line-height: 1.1; /* Ajusta el espacio entre las líneas del título */
+}
+
+/* La frase en cursiva y dorada */
+.hero-texto .resaltado {
+  color: #D97941;
+  font-family: 'Great Vibes', cursive; /* Aquí llamamos a la letra hermosa */
+  font-size: 80px; /* La hacemos un poquito más grande porque esa letra es fina */
+  font-weight: normal;
+}
+
+/* El parrafito debajo del título */
+.hero-texto p {
+  font-size: 18px;
+  color: #442818;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+/* --- EL BOTÓN --- */
+.btn-principal {
+  background-color: #442818; /* Fondo café oscuro */
+  color: #F9F4EC; /* Letra cremita */
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 30px; /* Bordes bien redonditos */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Efecto al pasar el mouse por el botón */
+.btn-principal:hover {
+  background-color: #D97941; /* Se pone dorado */
+}
+
+/* --- Estilos para la caja de la imagen (mitad derecha) --- */
+.hero-imagen {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end; /* Empuja la imagen hacia la derecha */
+}
+
+.hero-imagen img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 30px; /* Redondea las esquinas de la foto */
+  box-shadow: 10px 10px 30px rgba(68, 40, 24, 0.2); /* Le da una sombrita elegante */
+}
+
+/* --- SECCIÓN PRODUCTOS --- */
+.seccion-productos {
+  padding: 80px 10%; /* Espacio para que respire */
+  text-align: center; /* Centramos el título principal */
+}
+
+.titulo-seccion {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 45px;
+  color: #442818;
+  margin-bottom: 50px;
+}
+
+/* Aquí aplicamos la magia de GRID */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea exactamente 3 columnas del mismo tamaño */
+  gap: 40px; /* El espacio de separación entre cada tarjeta */
+}
+
+/* Estilos individuales de cada Tarjeta */
+.tarjeta-pan {
+  background-color: white; /* Fondo blanco para que resalte sobre el crema de la página */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(68, 40, 24, 0.08); /* Sombra muy suavecita */
+  transition: transform 0.3s ease; /* Prepara la tarjeta para una animación */
+  text-align: left; /* Volvemos a alinear el texto de la tarjeta a la izquierda */
+}
+
+/* Efecto: que la tarjeta "flote" cuando pasas el mouse */
+.tarjeta-pan:hover {
+  transform: translateY(-10px); /* Sube la tarjeta 10 pixeles */
+  box-shadow: 0 15px 25px rgba(68, 40, 24, 0.15); /* Hace la sombra más grande */
+}
+
+/* La foto dentro de la tarjeta */
+.tarjeta-pan img {
+  width: 100%; /* Que la foto ocupe todo el ancho de su tarjeta */
+  height: 250px; /* Todas las fotos tendrán la misma altura */
+  object-fit: cover; /* Evita que la foto se deforme o se aplaste */
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* Textos dentro de la tarjeta */
+.tarjeta-pan h3 {
+  color: #442818;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-pan p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.tarjeta-pan .precio {
+  display: block;
+  font-size: 22px;
+  color: #D97941; /* El dorado horneado */
+  font-weight: bold;
+}
+
+/* --- SECCIÓN NOSOTROS --- */
+.seccion-nosotros {
+  padding: 80px 10%;
+  background-color: #FFFFFF; /* Le ponemos fondo blanco para que resalte y se separe del fondo crema del resto de la página */
+   padding: 250px 10% 50px 10%;
+}
+
+.nosotros-contenido {
+  display: flex; /* Ponemos la foto y el texto lado a lado */
+  align-items: center; /* Los centramos verticalmente */
+  justify-content: space-between;
+  max-width: 1100px; /* Para que no se estire demasiado en pantallas gigantes */
+  margin: 0 auto; /* Centra toda la caja en la pantalla */
+  gap: 50px; /* Le da 50px de respiración entre la foto y el texto */
+}
+
+/* La caja de la imagen */
+.nosotros-imagen {
+  width: 45%;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  border-radius: 20px; /* Bordes redondos */
+  /* TRUCO VISUAL: Una sombra sólida dorada movida hacia abajo y a la izquierda */
+  box-shadow: -15px 15px 0px #D97941; 
+}
+
+/* La caja del texto */
+.nosotros-texto {
+  width: 50%;
+}
+
+.nosotros-texto h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 45px;
+  color: #442818;
+  margin-bottom: 25px;
+}
+
+.nosotros-texto p {
+  font-size: 18px;
+  color: #442818;
+  line-height: 1.7; /* Da más espacio entre los renglones para que se lea súper fácil */
+  margin-bottom: 20px;
+}
