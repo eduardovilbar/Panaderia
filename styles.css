@@ -281,3 +281,74 @@ footer {
   font-size: 16px;
   font-family: Arial, sans-serif;
 }
+
+.mapa-placeholder img {
+  width: 90%; /* Que la foto ocupe todo el ancho de su tarjeta */
+  height: 250px; /* Todas las fotos tendrán la misma altura */
+  object-fit: cover; /* Evita que la foto se deforme o se aplaste */
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO (Móviles y Tablets)
+   ========================================= */
+@media (max-width: 850px) {
+  
+  /* --- 1. Arreglando el Navbar --- */
+  .navbar {
+    flex-direction: column; /* Apila los elementos de arriba hacia abajo en lugar de izquierda a derecha */
+    padding: 15px;
+    position: static; /* Quitamos el fixed en celular para que el menú no tape media pantalla */
+  }
+
+  .navbar .logo {
+    width: 150px; /* Hacemos el logo más pequeño */
+    margin: 15px 0;
+  }
+
+  /* Centramos los enlaces para que no se amontonen */
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .navbar a {
+    font-size: 14px; /* Letra un poco más chica */
+    margin: 0; 
+  }
+
+  /* --- 2. Arreglando el Hero y el Botón --- */
+  .hero {
+    flex-direction: column; /* Ponemos el texto arriba y la foto abajo */
+    padding: 40px 5% 50px 5%; /* Reducimos el espacio gigante de arriba */
+    text-align: center; /* Centramos todo el texto */
+  }
+
+  .hero-texto {
+    width: 100%; /* Le damos todo el ancho de la pantalla para que el botón no se corte */
+    margin-bottom: 40px; /* Separamos el texto de la foto */
+  }
+
+  /* Hacemos los textos un poco más pequeños para celular */
+  .hero-texto h1 {
+    font-size: 45px;
+  }
+  
+  .hero-texto .resaltado {
+    font-size: 55px;
+  }
+
+  /* Aseguramos que el botón se comporte bien y no se deforme */
+  .btn-principal {
+    display: inline-block; 
+    white-space: nowrap; /* Evita que el texto del botón se parta en dos renglones */
+  }
+
+  .hero-imagen {
+    width: 100%; /* La foto ahora ocupa todo el ancho disponible */
+    justify-content: center;
+  }
+}
